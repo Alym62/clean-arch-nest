@@ -10,7 +10,7 @@ export class EnvConfigService implements EnvConfig {
   ) { }
 
   getAppPort(): number {
-    return this.configService.get<number>('PORT');
+    return Number(this.configService.get<number>('PORT'));
   }
 
   getNodeEnv(): string {
